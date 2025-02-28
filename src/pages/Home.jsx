@@ -1,7 +1,7 @@
 import React from 'react'
-import StatsTails from '../components/home/statsTails'
 import MainDescription from '../components/home/MainDescription'
 import FixedBg from '../components/FixedBg'
+import StatsTails from '../components/home/StatsTails'
 
 const Home = () => {
   return (
