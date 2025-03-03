@@ -6,6 +6,7 @@ import Villages from '../components/home/Villages'
 import Readings from '../components/home/Readings'
 import Quote from '../components/home/Quote'
 import KrpInfo from '../components/home/KrpInfo'
+import Church from '../components/home/Church'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Readings/>
       <Quote/>
       <KrpInfo/>
+      <Church/>
       <FixedBg/>
     </>
   )
