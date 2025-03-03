@@ -75,7 +75,23 @@ body{
   color: #000;
 }
 
-/*---Paski menu---*/
+h1{font-size: 35px;}
+h2{font-size: 30px;}
+h3{font-size: 25px;}
+
+@media only screen and (max-width: 1535px) {
+  h1{font-size: 30px;}
+  h2{font-size: 25px;}
+  h3{font-size: 20px;}
+}
+
+@media only screen and (max-width: 767px) {
+  h1{font-size: 25px;}
+  h2{font-size: 20px;}
+  h3{font-size: 18px;}
+}
+
+/* ---------- Paski menu ----------*/
 
 .menu-strips::before{
   content: '';
@@ -99,16 +115,17 @@ body{
   background-color: #CDA272;
 }
 
+
 @media only screen and (max-width: 1535px){
   .menu-strips::after,
   .menu-strips::before{
     width: 60px;
   }
-
+  
   .menu-strips::after{
     right: calc(-60px - 20px);
   }
-
+  
   .menu-strips::before{
     left: calc(-60px - 20px);
   }
@@ -119,24 +136,59 @@ body{
   .menu-strips::before{
     width: 40px;
   }
-
+  
   .menu-strips::after{
     right: calc(-40px - 20px);
   }
-
+  
   .menu-strips::before{
     left: calc(-40px - 20px);
   }
 }
 
-h1{font-size: 35px;}
-h2{font-size: 30px;}
-h3{font-size: 25px;}
+/* ---------- Paski titleCard ---------- */
+.title-card::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50px;
+  height: 2px;
+  width: 100px;
+  background-color: #CDA272;
+}
+
+.title-card::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 50px;
+  height: 2px;
+  width: 100px;
+  background-color: #CDA272;
+}
+
+@media only screen and (max-width: 1023px){
+  .title-card::after,
+  .title-card::before{
+    width: 40px;
+  }
+}
+
+@media only screen and (max-width: 639px){
+  .title-card::before{
+    left: 15px;
+    width: 20px;
+  }
+  .title-card::after{
+    right: 15px;
+    width: 20px;
+  }
+}
 
 
-/*menu hamburger*/
-
-/* menu - hamburger */
+/* ---------- menu - hamburger ---------- */
 
 .hamburger-menu.active > span:first-child{
   top: 50%;
@@ -156,7 +208,7 @@ h3{font-size: 25px;}
   position: absolute;
 }
 
-/* menu - mobile */
+/* ---------- menu - mobile ---------- */
 
 .menu-mobile li{
   animation: showMenu 1s ease-in-out forwards;
@@ -175,12 +227,3 @@ h3{font-size: 25px;}
   }
 }
 
-@media only screen and (max-width: 1535px) {
-  h1{font-size: 30px;}
-
-}
-
-@media only screen and (max-width: 767px) {
-  h1{font-size: 25px;}
-
-}

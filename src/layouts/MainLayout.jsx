@@ -8,7 +8,7 @@ const MainLayout = () => {
         <>
             <Navbar/>
             <Header />
-            <main className="flex flex-col">
+            <main className="flex flex-col relative">
                 <Outlet />
             </main>
             <Footer />

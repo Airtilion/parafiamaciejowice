@@ -1,8 +1,11 @@
 import React from 'react'
+import TitleCard from '../components/TitleCard'
 
 const Posts = () => {
   return (
-    <div>Posts</div>
+    <>
+      <TitleCard title="Parafialny Zespół Charytatywny" />
+    </>
   )
 }
 
