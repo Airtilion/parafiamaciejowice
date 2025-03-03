@@ -65,12 +65,12 @@ const Navbar = () => {
     }, [])
 
     return (
-        <nav className='h-[120px] px-[96px] flex items-center justify-between sticky top-0 z-20 bg-white max-2xl:px-[64px] max-xl:h-[100px] max-sm:px-[16px]'>
+        <nav className='h-[120px] px-[96px] flex items-center justify-between sticky top-0 z-40 bg-white max-2xl:px-[64px] max-xl:h-[100px] max-sm:px-[16px]'>
             <Link to="/">
                 <img src={Logo} height={100} alt="Logo parafii Maciejowice" className='h-[100px] max-xl:h-[80px]' />
             </Link>
 
-            <ul className='menu-strips relative flex gap-10 mr-[140px] max-2xl:gap-[24px] max-2xl:mr-[70px] max-xl:gap-[16px] max-lg:hidden'>
+            <ul className='menu-strips relative flex gap-10 items-center mr-[140px] max-2xl:gap-[24px] max-2xl:mr-[70px] max-xl:gap-[16px] max-lg:hidden'>
                 {elements.map((element, index) => (
                     <li key={index} className='text-[18px] text-center hover:text-[#CDA272] duration-500 max-xl:text-[16px]'>
                         <Link to={element.link} dangerouslySetInnerHTML={{ __html: element.name }}></Link>

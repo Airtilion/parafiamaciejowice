@@ -5,7 +5,7 @@ import SingleStatsTail from './SingleStatsTail'
 
 const StatsTails = () => {
   return (
-    <section className='w-[1096px] relative mx-auto flex justify-between mt-[-48px] z-10 max-2xl:w-[976px] max-xl:w-[896px] max-lg:flex-wrap max-lg:w-[432px] max-lg:gap-[32px] max-sm:w-[200px]'>
+    <section className='w-[1096px] relative my-[64px] mx-auto flex justify-between z-10 max-2xl:w-[976px] max-xl:w-[896px] max-lg:flex-wrap max-lg:w-[432px] max-lg:gap-[32px] max-sm:w-[200px]'>
         {data.map((element, index) => (
             <SingleStatsTail key={index} name={element.name} before={element.before} after={element.after} data={element.data}/>
         ))}
