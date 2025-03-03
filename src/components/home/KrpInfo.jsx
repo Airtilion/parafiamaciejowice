@@ -53,11 +53,11 @@ const KrpInfo = () => {
                     <h3 className='mb-[24px]'>Najnowsze informacje</h3>
 
                     {posts?.map((post, index) => (
-                        <Link to={post.link} target='_blank' rel='norefer noopener'>
-                            <div key={index} className='flex gap-[32px] relative items-center py-[16px]' style={{borderBottom: (index === 0 || index === 1) && 'solid 1px #D9D9D9'}}>
+                        <Link to={post.link} key={index} target='_blank' rel='norefer noopener'>
+                            <div className='flex gap-[32px] relative items-center py-[16px] max-sm:gap-[12px]' style={{borderBottom: (index === 0 || index === 1) && 'solid 1px #D9D9D9'}}>
                                 <p className='text-[40px] text-[#C5C5C5] font-medium w-[50px]'>0{index + 1}</p>
-                                <div className='w-[300px] max-lg:w-auto flex-1 pr-[30px]'>
-                                    <p className='text-[20px] font-medium line-clamp-2 mb-[8px] max-xl:text-[18px]'>{post.title}</p>
+                                <div className='w-[300px] max-lg:w-auto flex-1 pr-[30px] max-sm:pr-[20px]'>
+                                    <p className='text-[20px] font-medium line-clamp-2 mb-[8px] max-xl:text-[18px] max-sm:text-[15px]'>{post.title}</p>
                                     <p className='text-[15px] text-[#7D7D7D]'>{formatDate(post.published)}</p>
                                 </div>
                                 <Icon icon="ep:arrow-right-bold" width="20" height="20" className='absolute right-0 top-[50%] translate-y-[-50%]'/>
