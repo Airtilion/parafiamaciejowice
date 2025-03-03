@@ -6,11 +6,11 @@ import Navbar from "../components/Navbar";
 const MainLayout = () => {
     return (
         <>
-            {/* <Navbar/>
+            <Navbar/>
             <Header />
             <main className="flex flex-col">
                 <Outlet />
-            </main> */}
+            </main>
             <Footer />
         </>
 
