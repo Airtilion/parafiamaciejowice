@@ -8,7 +8,7 @@ const News = ({scrollToTop}) => {
   const [currentPage, setCurrentPage] = useState(1)
   const [totalPages, setTotalPages] = useState(0)
 
-  const postsPerPage = 2;
+  const postsPerPage = 1;
 
   const getData = async (page = 1) => {
     try {
@@ -77,26 +77,26 @@ const News = ({scrollToTop}) => {
                 const day = date.getDate();
 
                 return (
-                  <article key={index} className='bg-white w-[1240px] h-[300px] rounded-[5px] flex p-[64px] relative' style={{ boxShadow: '4px 4px 20px 0 rgba(0, 0, 0, 0.25)' }}>
+                  <article key={index} className='bg-white w-[1240px] h-[300px] rounded-[5px] flex p-[64px] relative max-xl:w-[950px] max-lg:w-[90%] max-lg:px-[32px] max-sm:pt-[32px] max-sm:pb-[64px] max-sm:flex-col max-sm:h-full' style={{ boxShadow: '4px 4px 20px 0 rgba(0, 0, 0, 0.25)' }}>
                     <div className='flex flex-col items-center justify-center'>
-                      <p className='text-[100px] font-bold text-[#CDA272]'>{day}</p>
-                      <p className='text-[18px] font-light mt-[-24px]'>{month}</p>
-                      <p className='text-[20px] font-bold'>{year}</p>
+                      <p className='text-[100px] font-bold text-[#CDA272] max-sm:text-[80px]'>{day}</p>
+                      <p className='text-[18px] font-light mt-[-24px] max-sm:text-[16px]'>{month}</p>
+                      <p className='text-[20px] font-bold max-sm:text-[18px]'>{year}</p>
                     </div>
 
-                    <div className='flex justify-center items-center px-[32px]'>
-                      <hr className='bg-[#D9D9D9] h-[150px] w-[2px] border-none' />
+                    <div className='flex justify-center items-center px-[32px] max-sm:px-0 max-sm:py-[16px]'>
+                      <hr className='bg-[#D9D9D9] h-[150px] w-[2px] border-none max-sm:h-[2px] max-sm:w-[150px]' />
                     </div>
 
 
-                    <div className='max-w-[940px]'>
+                    <div className='max-w-[940px] max-xl:w-[650px] max-lg:w-full'>
                       <h3 className='line-clamp-2' dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
                       <p className='line-clamp-3 mt-[16px] text-[16px]' dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
                     </div>
 
-                    <div className='absolute bottom-[-24px] right-[64px]'>
+                    <div className='absolute bottom-[-24px] right-[64px] max-sm:right-[50%] max-sm:-translate-x-[-50%]'>
                       <Link to={`/aktualnosci/${post.id}`}>
-                        <button className='bg-[#CDA272] px-[43px] py-[12px] text-black rounded-[5px] cursor-pointer duration-700 hover:bg-[#e7b67f]'>Czytaj dalej</button>
+                        <button className='bg-[#CDA272] px-[43px] py-[12px] text-black rounded-[5px] cursor-pointer duration-700 hover:bg-[#e7b67f] max-sm:px-[16px]'>Czytaj dalej</button>
                       </Link>
                     </div>
 
