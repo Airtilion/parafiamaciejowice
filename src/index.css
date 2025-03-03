@@ -129,6 +129,11 @@ body{
   }
 }
 
+h1{font-size: 35px;}
+h2{font-size: 30px;}
+h3{font-size: 25px;}
+
+
 /*menu hamburger*/
 
 /* menu - hamburger */
@@ -168,4 +173,14 @@ body{
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+@media only screen and (max-width: 1535px) {
+  h1{font-size: 30px;}
+
+}
+
+@media only screen and (max-width: 767px) {
+  h1{font-size: 25px;}
+
 }
