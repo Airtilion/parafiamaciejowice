@@ -7,6 +7,7 @@ import Readings from '../components/home/Readings'
 import Quote from '../components/home/Quote'
 import KrpInfo from '../components/home/KrpInfo'
 import Church from '../components/home/Church'
+import NewsSection from '../components/home/NewsSection'
 
 const Home = () => {
   return (
@@ -18,6 +19,8 @@ const Home = () => {
       <Quote/>
       <KrpInfo/>
       <Church/>
+
+      <NewsSection />
       <FixedBg/>
     </>
   )
