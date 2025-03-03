@@ -8,7 +8,7 @@ const News = ({scrollToTop}) => {
   const [currentPage, setCurrentPage] = useState(1)
   const [totalPages, setTotalPages] = useState(0)
 
-  const postsPerPage = 1;
+  const postsPerPage = 5;
 
   const getData = async (page = 1) => {
     try {
