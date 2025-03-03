@@ -54,8 +54,8 @@ const News = ({scrollToTop}) => {
   };
 
   const polishMonths = [
-    'stycznia', 'lutego', 'kwietnia', 'maja', 'czerwca',
-    'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia',
+    'Stycznia', 'Lutego', 'Marca', 'Kwietnia', 'Maja', 'Czerwca',
+    'Lipca', 'Sierpnia', 'Września', 'Października', 'Listopada', 'Grudnia',
   ];
 
   return (
