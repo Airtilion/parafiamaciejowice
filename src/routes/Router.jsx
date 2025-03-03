@@ -10,6 +10,7 @@ import Projects from "../pages/Projects";
 import Information from "../pages/Information";
 import History from "../pages/History";
 import Charity from "../pages/Charity";
+import ChildSafetyPolicies from "../pages/ChildSafetyPolicies";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: "informator", element: <Information /> },
       { path: "historia", element: <History /> },
       { path: "zespol-charytatywny", element: <Charity /> },
+      { path: "standardy-ochrony-dzieci", element: <ChildSafetyPolicies />},
       
     ],
   },
