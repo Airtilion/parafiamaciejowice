@@ -6,8 +6,8 @@ import Navbar from "../components/Navbar";
 const MainLayout = () => {
     return (
         <>
-            {/* <Navbar/>
-            <Header /> */}
+            <Navbar/>
+            <Header />
             <main className="flex flex-col relative">
                 <Outlet />
             </main>

@@ -5,7 +5,7 @@ import ButtonKRP from '../components/ButtonKRP'
 const Posts = () => {
   return (
     <>
-      <TitleCard title="Parafialny Zespół Charytatywny" />
+      <TitleCard title="Aktualności" />
       <div className='text-[18px] flex flex-col justify-center items-center max-lg:w-[90%] max-lg:mx-auto'>
         
         <div>
