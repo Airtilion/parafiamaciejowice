@@ -3,6 +3,7 @@ import TitleCard from '../components/TitleCard'
 import ButtonKRP from '../components/ButtonKRP'
 import News from '../components/posts/News'
 import FixedBg from '../components/FixedBg'
+import { Links } from 'react-router-dom'
 
 const Posts = () => {
   const sectionRef = useRef(null);
@@ -29,6 +30,7 @@ const Posts = () => {
       </div>
 
       <News scrollToTop={scrollToTop} />
+    
       <FixedBg />
     </>
   )
