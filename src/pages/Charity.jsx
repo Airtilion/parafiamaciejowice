@@ -1,8 +1,17 @@
 import React from 'react'
+import TitleCard from '../components/TitleCard'
+import FixedBg from '../components/FixedBg'
+import Team from '../components/charity/Team'
 
 const Charity = () => {
   return (
-    <div>Charity</div>
+    <>
+      <TitleCard title="Parafialny Zespół Charytatywny" />
+
+      <Team />
+
+      <FixedBg />
+    </>
   )
 }
 
