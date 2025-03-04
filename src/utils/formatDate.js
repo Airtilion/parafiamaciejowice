@@ -15,3 +15,27 @@ export const formatDate = (isoDate) => {
     // Zwrócenie sformatowanej daty
     return `${hours}:${minutes}, ${day} ${month} ${year}`;
   }
+
+  export function formatDateG(data) {
+    // Tworzenie obiektu daty z podanego ciągu
+    const date = new Date(data);
+    
+    // Sprawdzenie, czy data jest poprawna
+    if (isNaN(date.getTime())) {
+        return 'Niepoprawna data';
+    }
+    
+    // Tablica z polskimi nazwami miesięcy
+    const miesiace = [
+        'stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca',
+        'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia'
+    ];
+    
+    // Pobranie dnia, miesiąca i roku
+    const dzien = date.getDate();
+    const miesiac = miesiace[date.getMonth()];
+    const rok = date.getFullYear();
+    
+    // Zwrócenie sformatowanej daty
+    return `${dzien} ${miesiac} ${rok} r.`;
+}

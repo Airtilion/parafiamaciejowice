@@ -279,3 +279,7 @@ h3{font-size: 25px;}
   .charity .wp-element-button{padding-inline: 15px;}
   .charity .wp-block-button{display: flex; justify-content: center;}
 }
+
+.image-shape{
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
+}
