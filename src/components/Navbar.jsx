@@ -65,7 +65,7 @@ const Navbar = () => {
     }, [])
 
     return (
-        <nav className='h-[120px] px-[96px] flex items-center justify-between sticky top-0 z-40 bg-white max-2xl:px-[64px] max-xl:h-[100px] max-sm:px-[16px]'>
+        <nav className='h-[120px] px-[96px] flex items-center justify-between sticky top-0 z-40 bg-white max-2xl:px-[64px] max-xl:h-[100px] max-sm:px-[16px] shadow-[0px_4px_20px_#00000030]'>
             <Link to="/">
                 <img src={Logo} height={100} alt="Logo parafii Maciejowice" className='h-[100px] max-xl:h-[80px]' />
             </Link>

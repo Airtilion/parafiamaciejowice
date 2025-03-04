@@ -8,6 +8,7 @@ import Quote from '../components/home/Quote'
 import KrpInfo from '../components/home/KrpInfo'
 import Church from '../components/home/Church'
 import NewsSection from '../components/home/NewsSection'
+import Contact from '../components/home/Contact'
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
 
       <NewsSection />
       <Church/>
+      <Contact/>
       <FixedBg/>
     </>
   )
