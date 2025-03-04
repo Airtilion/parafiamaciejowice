@@ -7,12 +7,12 @@ import Links from "../components/Links";
 const MainLayout = () => {
     return (
         <>
-            <Navbar/>
+            <Navbar />
             <Header />
             <main className="flex flex-col relative">
                 <Outlet />
+                <Links />
             </main>
-            <Links />
             <Footer />
         </>
 
