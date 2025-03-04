@@ -18,9 +18,9 @@ const Home = () => {
       <Readings/>
       <Quote/>
       <KrpInfo/>
-      <Church/>
 
       <NewsSection />
+      <Church/>
       <FixedBg/>
     </>
   )
