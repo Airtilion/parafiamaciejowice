@@ -241,3 +241,41 @@ h3{font-size: 25px;}
 @keyframes l13{ 
   100%{transform: rotate(1turn)}
 }
+
+/* ---------- posty parafialny zespół charytatywny ---------- */
+.charity .wp-block-columns{display: flex; justify-content: center; gap: 32px;}
+.charity h4{font-size: 50px; font-weight: 600; color: #CDA272;}
+.charity p{font-size: 18px; font-weight: 300;}
+.charity .has-text-align-center{text-align: center;}
+.charity .is-vertically-aligned-center{display: flex; align-items: center;}
+
+.charity .wp-block-button{margin-top:64px;}
+.charity .wp-element-button{
+  background-color: #CDA272;
+  color: #000;
+  font-size: 18px;
+  font-weight: 300;
+  padding-block: 12px;
+  padding-inline: 30px;
+  border-radius: 5px;
+  transition-duration: 700ms;
+}
+.charity .wp-element-button:hover{background-color: #e7b67f;}
+
+.charity .helpCharity > p:nth-of-type(even){margin-bottom: 8px;}
+.charity .helpCharity > p:nth-of-type(odd){color: #7D7D7D;}
+
+@media only screen and (max-width: 1023px){
+  .charity .wp-block-columns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .charity .wp-block-column{flex-basis: 0 !important;}
+  .charity p{font-size: 16px;}
+  .charity .wp-element-button{padding-inline: 15px;}
+  .charity .wp-block-button{display: flex; justify-content: center;}
+}
