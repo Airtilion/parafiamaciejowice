@@ -10,7 +10,6 @@ const InformationTable = () => {
             const response = await fetch('http://localhost:8881/wp-json/wp/v2/informator')
             if (!response.ok) throw new Error('Błąd pobierania');
             const data = await response.json()
-            console.log(data);
             setPosts(data)
             setLoading(false)
         }
