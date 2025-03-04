@@ -90,7 +90,7 @@ const SingleGallery = () => {
     <>
       <TitleCard title="Galeria" />
       <section
-        className="w-[1190px] mx-auto relative mb-[64px] max-2xl:w-[890px] max-lg:w-[590px] max-md:w-[90%] max-md:flex max-md:flex-col max-md:items-center max-md:gap-[8px]"
+        className="w-[1190px] mx-auto relative mb-[64px] max-2xl:w-[890px] max-lg:w-[590px] max-md:w-[90%] max-md:flex max-md:flex-col max-md:items-center max-md:gap-[8px] overflow-hidden"
         style={{ height: columns > 1 ? siteHeight : "auto" }}
       >
         {photos.map((photo, index) => (
@@ -105,7 +105,7 @@ const SingleGallery = () => {
             style={{
               transform: columns > 1 && `translate(${coords[index]?.x}px, ${coords[index]?.y}px)`,
             }}
-            onClick={() => openImageBrowser(photo._id)}
+            onClick={() => openImageBrowser(index)}
           />
         ))}
       </section>
