@@ -38,7 +38,7 @@ const NewsSection = () => {
                 <div className='mt-[32px]'>
                     {
                         loading ?
-                            <div className="loader"></div>
+                            <div className="mx-auto loader"></div>
                             :
                             <div className='flex flex-col gap-[16px]'>
                                 {posts.length === 0 ?
