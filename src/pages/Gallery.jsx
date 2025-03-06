@@ -32,9 +32,9 @@ const Gallery = () => {
     <>
       <TitleCard title="Galeria" />
 
-      <section className='w-[1168px] mx-auto flex gap-[16px] flex-wrap mb-[64px]'>
+      <section className='w-[1168px] mx-auto flex gap-[16px] flex-wrap mb-[64px] max-xl:w-[872px] max-lg:w-[576px] max-sm:w-[90%] max-sm:justify-center'>
         {albums?.map((album, index) => (
-          <Link to={`/galeria/${album.name}`} target='_blank'>
+          <Link to={`/galeria/${album.name}`}>
             <article key={index} className='relative w-[280px] h-[350px] shadow-[4px_4px_20px_#00000040] bg-white'>
               <img src={album.cover_image} alt="Zdjęcie okładki albumu" loading='lazy' className='image-shape object-cover h-[250px]' />
               <div className='absolute bg-white px-[32px] py-[16px]'>

@@ -20,7 +20,7 @@ const Home = () => {
       <Quote/>
       <KrpInfo/>
 
-      <NewsSection />
+      {/* <NewsSection /> */}
       <Church/>
       <Contact/>
       <FixedBg/>

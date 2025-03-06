@@ -5,26 +5,32 @@ import { Link } from 'react-router-dom'
 const elements = [
     {
         name: "Nasza Parafia",
+        mobileName: "Nasza Parafia",
         link: "/#parafia"
     },
     {
         name: "Porządek Mszy św.<br />(Informator Parafialny)",
+        mobileName: "Porządek Mszy św. (Informator Parafialny)",
         link: "/informator"
     },
     {
         name: "Wiadomości <br />z życia Kościoła",
+        mobileName: "Wiadomości z życia Kościoła",
         link: "/#krp"
     },
     {
         name: "Galeria",
+        mobileName: "Galeria",
         link: "/galeria"
     },
     {
         name: "Cmentarz",
+        mobileName: "Cmentarz",
         link: "https://airtilion.com"
     },
     {
         name: "Kontakt",
+        mobileName: "Kontakt",
         link: "/#kontakt"
     },
 ]
@@ -91,7 +97,7 @@ const Navbar = () => {
                     {
                         elements.map((item, index) => (
                             <li key={index} style={{ animationDelay: `${index * 100}ms` }} onClick={menuVisibilityHandle}>
-                                <a href={item.link} className={`text-[18px] xl:text-[17px] text-white`}>{item.name}</a>
+                                <a href={item.link} className={`text-[18px] xl:text-[17px] text-white`}>{item.mobileName}</a>
                             </li>
                         ))
                     }
