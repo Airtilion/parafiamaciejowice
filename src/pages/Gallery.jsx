@@ -9,7 +9,7 @@ const Gallery = () => {
 
   const getAlbums = async () => {
     try{
-      const response = await fetch('http://localhost:8882/wp-json/custom/v1/albums/')
+      const response = await fetch('https://parafiamaciejowice.pl/wp-json/custom/v1/albums/')
 
       if(!response.ok){
         throw new Error('Nie udało się pobrać albumów')

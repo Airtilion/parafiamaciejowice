@@ -18,7 +18,7 @@ const SingleGallery = () => {
   const getAlbum = async () => {
     try {
       const response = await fetch(
-        `http://localhost:8882/wp-json/custom/v1/folder-images/?folder_name=${id}`
+        `https://parafiamaciejowice.pl/wp-json/custom/v1/folder-images/?folder_name=${id}`
       );
 
       if (!response.ok) {

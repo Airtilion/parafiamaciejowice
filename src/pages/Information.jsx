@@ -1,7 +1,7 @@
 import React from 'react'
 import TitleCard from '../components/TitleCard'
 import FixedBg from '../components/FixedBg'
-import InformationTable from '../components/information/informationTable'
+import InformationTable from '../components/information/InformationTable'
 
 const Information = () => {
   return (

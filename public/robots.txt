@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /wp-json/
+Disallow: /react-app/
+Disallow: /*.js
+Disallow: /*.css
+Disallow: /?*
+Disallow: /*?*
+
+Sitemap: https://parafiamaciejowice/sitemap.xml

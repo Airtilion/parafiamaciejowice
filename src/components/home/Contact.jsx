@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 
 const Contact = () => {
     return (
-        <section className='relative w-full pb-[32px] pt-[64px] max-xl:pt-[32px]'>
+        <section className='relative w-full pb-[32px] pt-[64px] max-xl:pt-[32px]' id="kontakt">
             <article className='w-[1240px] mx-auto flex gap-[128px] max-xl:w-[1000px] max-xl:gap-[64px] max-lg:flex-col max-lg:w-[90%]'>
                 
                 <div className='relative h-full mt-[-100px] flex flex-col gap-[16px] max-xl:mt-[-80px]'>

@@ -12,7 +12,7 @@ const News = ({scrollToTop}) => {
 
   const getData = async (page = 1) => {
     try {
-      const response = await fetch(`http://localhost:8881/wp-json/wp/v2/posts?categories=4&_embed&per_page=${postsPerPage}&page=${page}`)
+      const response = await fetch(`https://parafiamaciejowice.pl/wp-json/wp/v2/posts?categories=4&_embed&per_page=${postsPerPage}&page=${page}`)
       if (!response.ok) throw new Error('Błąd pobierania');
       const data = await response.json();
 

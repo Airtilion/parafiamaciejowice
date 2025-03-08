@@ -6,7 +6,7 @@ const RequestForQuote = () => {
 
     const getData = async () => {
         try {
-            const response = await fetch('http://localhost:8881/wp-json/wp/v2/dofinansowanie')
+            const response = await fetch('https://parafiamaciejowice.pl/wp-json/wp/v2/dofinansowanie')
             if (!response.ok) throw new Error('Błąd pobierania');
             const data = await response.json()
             setPosts(data)

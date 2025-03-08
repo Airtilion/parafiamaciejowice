@@ -19,7 +19,7 @@ const Readings = () => {
 
     const getReadings = async () => {
         try {
-            const response = await fetch('http://localhost:8882/wp-json/liturgia/v1/html');
+            const response = await fetch('https://parafiamaciejowice.pl/wp-json/liturgia/v1/html');
             if (!response.ok) {
                 throw new Error('Nie udało się pobrać czytań')
             }
@@ -85,7 +85,7 @@ const Readings = () => {
                                 <p className='text-[30px] text-[#343434] max-sm:text-[25px]'>{decodeUnicode(dzien)}</p>
                             </div>
                         </div>
-                        <p className='mt-[32px] text-[18px] text-[#343434]'>{decodeUnicode(okres)}</p>
+                        <p className='mt-[32px] text-[18px] text-[#343434] max-w-[400px]'>{decodeUnicode(okres)}</p>
                         <p className='mt-[8px] text-[18px] text-[#343434]'>{decodeUnicode(rok)}</p>
                     </article>
 

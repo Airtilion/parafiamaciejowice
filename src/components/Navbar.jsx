@@ -26,7 +26,7 @@ const elements = [
     {
         name: "Cmentarz",
         mobileName: "Cmentarz",
-        link: "https://airtilion.com"
+        link: "http://mogily.pl/maciejowice"
     },
     {
         name: "Kontakt",

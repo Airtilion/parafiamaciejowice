@@ -40,7 +40,7 @@ const KrpInfo = () => {
     }, []);
 
     return (
-        <section className="w-full pt-[128px] pb-[64px] bg-white">
+        <section className="w-full pt-[128px] pb-[64px] bg-white" id="krp">
             <h2 className="max-w-[1240px] mx-auto font-light mb-[32px] max-2xl:max-w-[1000px] max-xl:max-w-[900px] max-lg:max-w-auto max-lg:w-[80%]">Serwis informacyjny KRP</h2>
             <article className="w-[1240px] max-2xl:w-[1000px] flex gap-[128px] mx-auto max-xl:gap-[64px] max-xl:w-[900px] max-lg:flex-col max-lg:w-[80%]">
                 <div className="flex flex-col gap-[32px] flex-1">
