@@ -77,7 +77,7 @@ const News = ({scrollToTop}) => {
                 const day = date.getDate();
 
                 return (
-                  <article key={index} className='bg-white w-[1240px] h-[300px] rounded-[5px] flex p-[64px] relative max-xl:w-[950px] max-lg:w-[90%] max-lg:px-[32px] max-sm:pt-[32px] max-sm:pb-[64px] max-sm:flex-col max-sm:h-full' style={{ boxShadow: '4px 4px 20px 0 rgba(0, 0, 0, 0.25)' }}>
+                  <article key={index} className='news bg-white w-[1240px] h-[300px] rounded-[5px] flex p-[64px] relative max-xl:w-[950px] max-lg:w-[90%] max-lg:px-[32px] max-sm:pt-[32px] max-sm:pb-[64px] max-sm:flex-col max-sm:h-full' style={{ boxShadow: '4px 4px 20px 0 rgba(0, 0, 0, 0.25)' }}>
                     <div className='flex flex-col items-center justify-center'>
                       <p className='text-[100px] font-bold text-[#CDA272] max-sm:text-[80px]'>{day}</p>
                       <p className='text-[18px] font-light mt-[-24px] max-sm:text-[16px]'>{month}</p>
