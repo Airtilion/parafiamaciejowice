@@ -12,7 +12,7 @@ const Contact = () => {
                         <Icon icon="flowbite:map-pin-alt-solid" width="50" height="50" className='relative z-30 text-[#CDA272]'/>
                         <p>Parafia Rzymskokatolicka pw. Wniebowzięcia NMP <br /> ul. Kościelna <br /> 408-480 Maciejowice</p>
                     </div>
-                    <iframe className='relative z-30 rounded-[5px] max-xl:w-[500px] max-xl:h-[400px] max-lg:w-full' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19782.33687702834!2d21.540044418560097!3d51.700249339443225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471895206e4c40c1%3A0x427a3c2f2b1e1678!2zS2_Fm2Npw7PFgiBXbmllYm93emnEmWNpYSBOTVAgdyBNYWNpZWpvd2ljYWNo!5e0!3m2!1spl!2spl!4v1741072411430!5m2!1spl!2spl" width="600" height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe title='Mapa dojazdu do Parafii Maciejowice' className='relative z-30 rounded-[5px] max-xl:w-[500px] max-xl:h-[400px] max-lg:w-full' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19782.33687702834!2d21.540044418560097!3d51.700249339443225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471895206e4c40c1%3A0x427a3c2f2b1e1678!2zS2_Fm2Npw7PFgiBXbmllYm93emnEmWNpYSBOTVAgdyBNYWNpZWpvd2ljYWNo!5e0!3m2!1spl!2spl!4v1741072411430!5m2!1spl!2spl" width="600" height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
                 <div className='relative z-30 text-white flex flex-col gap-[8px] max-lg:text-center max-sm:items-center'>
