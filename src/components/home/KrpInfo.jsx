@@ -46,7 +46,9 @@ const KrpInfo = () => {
                 <div className="flex flex-col gap-[32px] flex-1">
                     <p className="text-[18px] font-light max-lg:text-[16px]">Serwis KRP dostarcza najświeższe wiadomości z Siedlec, koncentrując się na wydarzeniach społecznych, kulturalnych i religijnych. To rzetelne źródło informacji o życiu miasta, relacjonujące lokalne inicjatywy, spotkania, uroczystości oraz decyzje samorządowe.</p>
                     <p className="text-[18px] font-light mb-[32px] max-lg:text-[16px]">Dzięki regularnym aktualizacjom, reportażom i wywiadom, serwis pozwala śledzić najważniejsze wydarzenia z regionu, będąc cennym źródłem informacji dla mieszkańców i wszystkich zainteresowanych życiem Siedlec.</p>
-                    <ButtonKRP />
+                    <div>
+                        <ButtonKRP />
+                    </div>
                 </div>
 
                 <div className="flex flex-col w-[500px] max-2xl:w-[450px] max-lg:w-[100%]">
@@ -54,13 +56,13 @@ const KrpInfo = () => {
 
                     {posts?.map((post, index) => (
                         <Link to={post.link} key={index} target='_blank' rel='norefer noopener'>
-                            <div className='flex gap-[32px] relative items-center py-[16px] max-sm:gap-[12px]' style={{borderBottom: (index === 0 || index === 1) && 'solid 1px #D9D9D9'}}>
+                            <div className='flex gap-[32px] relative items-center py-[16px] max-sm:gap-[12px]' style={{ borderBottom: (index === 0 || index === 1) && 'solid 1px #D9D9D9' }}>
                                 <p className='text-[40px] text-[#C5C5C5] font-medium w-[50px]'>0{index + 1}</p>
                                 <div className='w-[300px] max-lg:w-auto flex-1 pr-[30px] max-sm:pr-[20px]'>
                                     <p className='text-[20px] font-medium line-clamp-2 mb-[8px] max-xl:text-[18px] max-sm:text-[15px]'>{post.title}</p>
                                     <p className='text-[15px] text-[#7D7D7D]'>{formatDate(post.published)}</p>
                                 </div>
-                                <Icon icon="ep:arrow-right-bold" width="20" height="20" className='absolute right-0 top-[50%] translate-y-[-50%]'/>
+                                <Icon icon="ep:arrow-right-bold" width="20" height="20" className='absolute right-0 top-[50%] translate-y-[-50%]' />
                             </div>
                         </Link>
                     ))}
