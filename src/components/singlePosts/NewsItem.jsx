@@ -48,7 +48,7 @@ const NewsItem = ({ id }) => {
                             <div className="loader"></div>
                         </article>
                         :
-                        <article className='bg-white mb-[64px] py-[32px] px-[70px] flex flex-col justify-center items-center max-md:px-[32px]'>
+                        <article className='news bg-white mb-[64px] py-[32px] px-[70px] flex flex-col justify-center items-center max-md:px-[32px]'>
                             <p className='text-[100px] font-bold text-[#CDA272] max-sm:text-[80px]'>{date[0]}</p>
                             <p className='text-[18px] font-light mt-[-24px] max-sm:text-[16px]'>{date[1]}</p>
                             <p className='text-[20px] font-bold max-sm:text-[18px]'>{date[2]}</p>
