@@ -315,4 +315,4 @@ h3{font-size: 25px;}
 .no-images figure{display: none;}
 
 /* ---------- style do list ---------- */
-.news ol{list-style: decimal;}
+.news ol{list-style: decimal !important; padding-left: 24px;}
