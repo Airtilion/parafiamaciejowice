@@ -6,6 +6,7 @@ import realizationSecond from '../../assets/media/images/projects/realization-2.
 import realizationThird from '../../assets/media/images/projects/realization-3.webp'
 import realizationFourth from '../../assets/media/images/projects/realization-4.webp'
 import realizationFifth from '../../assets/media/images/projects/realization-5.webp'
+import { Link } from 'react-router-dom'
 
 const NatureEducationTrail = () => {
     return (
@@ -47,14 +48,16 @@ const NatureEducationTrail = () => {
                 <p className='mt-[16px]'>Uczniowie zyskali możliwość nabycia wiedzy i umiejętności, które sprawiają, że stają się ludźmi odpowiedzialnymi za stan środowiska w którym żyją, uczą się, w przyszłości będą pracować.</p>
                 <p className='mt-[16px]'>W ramach zadania terminowo osiągnięto zaplanowany efekt rzeczowy tj. w terminie 30.05.2023 r. została wybudowana ścieżka przyrodniczo-edukacyjna o długości 105,6 m z 20 elementami edukacyjnymi.</p>
 
-                <img src={project} width="499" height="349" alt="Zdjęcie przedstawiające projekt dofinansowania" loading="lazy" className='object-cover mt-[64px] mx-auto' style={{ boxShadow: '4px 4px 20px 0 rgba(0, 0, 0, 0.25)' }} />
+                <Link to="https://parafiamaciejowice.pl/wp-content/uploads/2025/03/dofinansowanie-sciezka.webp" target='_blank' rel="noreferrer noopener">
+                    <img src={project} width="499" height="349" alt="Zdjęcie przedstawiające projekt dofinansowania" loading="lazy" className='object-cover mt-[64px] mx-auto' style={{ boxShadow: '4px 4px 20px 0 rgba(0, 0, 0, 0.25)' }} />
+                </Link>
 
                 <div className='mt-[64px] flex justify-center items-center flex-wrap gap-[16px]'>
-                    <img src={realizationFirst} width="400" height="350" alt="Zdjęcie przedstawiające realizacje projektu" loading='lazy' className='object-cover' style={{ boxShadow: '4px 4px 20px 0 rgba(0, 0, 0, 0.25)' }}/>
-                    <img src={realizationSecond} width="400" height="350" alt="Zdjęcie przedstawiające realizacje projektu" loading='lazy' className='object-cover' style={{ boxShadow: '4px 4px 20px 0 rgba(0, 0, 0, 0.25)' }}/>
-                    <img src={realizationThird} width="400" height="350" alt="Zdjęcie przedstawiające realizacje projektu" loading='lazy' className='object-cover' style={{ boxShadow: '4px 4px 20px 0 rgba(0, 0, 0, 0.25)' }}/>
-                    <img src={realizationFourth} width="400" height="350" alt="Zdjęcie przedstawiające realizacje projektu" loading='lazy' className='object-cover' style={{ boxShadow: '4px 4px 20px 0 rgba(0, 0, 0, 0.25)' }}/>
-                    <img src={realizationFifth} width="400" height="350" alt="Zdjęcie przedstawiające realizacje projektu" loading='lazy' className='object-cover' style={{ boxShadow: '4px 4px 20px 0 rgba(0, 0, 0, 0.25)' }}/>
+                    <img src={realizationFirst} width="400" height="350" alt="Zdjęcie przedstawiające realizacje projektu" loading='lazy' className='object-cover' style={{ boxShadow: '4px 4px 20px 0 rgba(0, 0, 0, 0.25)' }} />
+                    <img src={realizationSecond} width="400" height="350" alt="Zdjęcie przedstawiające realizacje projektu" loading='lazy' className='object-cover' style={{ boxShadow: '4px 4px 20px 0 rgba(0, 0, 0, 0.25)' }} />
+                    <img src={realizationThird} width="400" height="350" alt="Zdjęcie przedstawiające realizacje projektu" loading='lazy' className='object-cover' style={{ boxShadow: '4px 4px 20px 0 rgba(0, 0, 0, 0.25)' }} />
+                    <img src={realizationFourth} width="400" height="350" alt="Zdjęcie przedstawiające realizacje projektu" loading='lazy' className='object-cover' style={{ boxShadow: '4px 4px 20px 0 rgba(0, 0, 0, 0.25)' }} />
+                    <img src={realizationFifth} width="400" height="350" alt="Zdjęcie przedstawiające realizacje projektu" loading='lazy' className='object-cover' style={{ boxShadow: '4px 4px 20px 0 rgba(0, 0, 0, 0.25)' }} />
                 </div>
             </article>
         </section>
