@@ -39,7 +39,7 @@ const NewsItem = ({ id }) => {
     return (
         <section className='w-[1240px] mx-auto max-xl:w-[950px] max-lg:w-[90%]'>
             <Link to="/aktualnosci" className='mb-[32px]'>
-                <p className='mb-[32px] hover:text-[#D79762] duration-500'>« Wróć do poprzdniej zakładki</p>
+                <p className='mb-[32px] hover:text-[#D79762] duration-500'>« Wróć do poprzedniej zakładki</p>
             </Link>
             <div className='flex justify-center items-center'>
                 {

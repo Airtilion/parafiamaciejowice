@@ -10,6 +10,7 @@ const InformationTable = () => {
             const response = await fetch('https://parafiamaciejowice.pl/wp-json/wp/v2/informator')
             if (!response.ok) throw new Error('Błąd pobierania');
             const data = await response.json()
+            console.log(data);
             setPosts(data)
             setLoading(false)
         }
@@ -66,6 +67,11 @@ const InformationTable = () => {
 
                                                 <InformationDay day="poniedzialek" textDay="Poniedziałek" post={post} formatDate={formatDate} />
                                                 <InformationDay day="wtorek" textDay="Wtorek" post={post} formatDate={formatDate} />
+                                                <InformationDay day="sroda" textDay="Środa" post={post} formatDate={formatDate} />
+                                                <InformationDay day="czwartek" textDay="Czwartek" post={post} formatDate={formatDate} />
+                                                <InformationDay day="piatek" textDay="Piątek" post={post} formatDate={formatDate} />
+                                                <InformationDay day="sobota" textDay="Sobota" post={post} formatDate={formatDate} />
+                                                <InformationDay day="niedziela" textDay="Niedziela" post={post} formatDate={formatDate} />
 
                                             </tbody>
 
