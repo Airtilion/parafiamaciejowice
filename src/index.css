@@ -310,3 +310,6 @@ h3{font-size: 25px;}
   .projects li{font-size: 16px;}
   .projects ul{padding-left: 16px;}
 }
+
+/* ---------- ukrywanie zdjęć w aktualnościach ---------- */
+.no-images figure{display: none;}

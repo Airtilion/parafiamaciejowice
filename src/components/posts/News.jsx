@@ -91,7 +91,7 @@ const News = ({scrollToTop}) => {
 
                     <div className='max-w-[940px] max-xl:w-[650px] max-lg:w-full'>
                       <h3 className='line-clamp-2' dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-                      <p className='line-clamp-3 mt-[16px] text-[16px]' dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+                      <div className='line-clamp-3 mt-[16px] text-[16px] no-images' dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
                     </div>
 
                     <div className='absolute bottom-[-24px] right-[64px] max-sm:right-[50%] max-sm:-translate-x-[-50%]'>
