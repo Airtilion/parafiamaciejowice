@@ -34,8 +34,10 @@ const CharityPosts = () => {
                                 :
                                 posts.map((post, index) => (
                                     <article className={`w-full ${index % 2 === 0 ? 'bg-white' : ''}`} key={index}>
-                                        <h4 className='text-[#cda272] text-[50px] font-semibold'>{post.title.rendered}</h4>
-                                        <div className='charity w-[1240px] py-[64px] mx-auto max-xl:w-[1000px] max-lg:w-[90%]' dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
+                                        <div className='charity w-[1240px] py-[64px] mx-auto max-xl:w-[1000px] max-lg:w-[90%]'>
+                                            <h4 className='text-[#cda272] text-[50px] font-semibold'>{post.title.rendered}</h4>
+                                            <div dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
+                                        </div>
                                     </article>
                                 ))
                             }
