@@ -146,7 +146,7 @@ const SingleGallery = () => {
             loading="lazy"
             width={290}
             height={(photo.height * 290) / photo.width}
-            className="absolute transition-all duration-300 rounded-lg max-md:relative brightness-75 cursor-pointer"
+            className="absolute transition-all duration-300 rounded-lg max-md:relative hover:brightness-75 cursor-pointer"
             style={{
               transform: columns > 1 && `translate(${coords[index]?.x}px, ${coords[index]?.y}px)`,
             }}
