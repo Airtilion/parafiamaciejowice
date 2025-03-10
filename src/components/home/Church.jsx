@@ -10,7 +10,7 @@ const Church = () => {
   return (
     <section className='w-full bg-white py-[64px] pb-[160px]'>
         <article className='w-[1240px] mx-auto flex gap-[32px] h-[500px] max-xl:gap-[16px] max-xl:w-[988px] max-lg:flex-col-reverse max-lg:w-[722px] max-lg:h-auto max-md:w-full'>
-            <ChurchCard title="Cmentarz" desc="więcej o naszym cmentarzu, zasadach korzystania oraz możliwościach pochówku." link="http://mogily.pl/maciejowice" image={cmentarzBg} type={0}/>
+            <ChurchCard title="Cmentarz" desc="więcej o naszym cmentarzu, zasadach korzystania oraz możliwościach pochówku." link="/cmentarz" image={cmentarzBg} type={0}/>
             
             <div className='flex flex-col justify-between max-lg:gap-[32px]'>
                 <div className='max-md:w-[90%] max-md:mx-auto'>
