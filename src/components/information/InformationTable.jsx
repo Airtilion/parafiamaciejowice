@@ -10,7 +10,6 @@ const InformationTable = () => {
             const response = await fetch('https://parafiamaciejowice.pl/wp-json/wp/v2/informator')
             if (!response.ok) throw new Error('Błąd pobierania');
             const data = await response.json()
-            console.log(data);
             setPosts(data)
             setLoading(false)
         }
