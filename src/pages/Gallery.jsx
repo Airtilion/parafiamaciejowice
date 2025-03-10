@@ -17,7 +17,7 @@ const Gallery = () => {
         throw new Error('Nie udało się pobrać albumów');
       }
       const data = await response.json();
-      setAlbums(data);
+      setAlbums(data.reverse());
     } catch (err) {
       console.error(err);
     }
