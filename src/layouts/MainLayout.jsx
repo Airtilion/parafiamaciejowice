@@ -15,7 +15,6 @@ const MainLayout = () => {
             </main>
             <Footer />
         </>
-
     );
 };
 
