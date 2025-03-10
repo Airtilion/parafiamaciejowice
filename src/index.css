@@ -316,3 +316,12 @@ h3{font-size: 25px;}
 
 /* ---------- style do list ---------- */
 .news ol{list-style: decimal !important; padding-left: 24px;}
+
+/*---gallery albums---*/
+
+
+.gallery-album:hover > img{
+  transition-duration: 500ms;
+  transform: scale(1.1);
+  filter: brightness(0.7);
+}

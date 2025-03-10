@@ -9,7 +9,7 @@ const Gallery = () => {
 
   const getAlbums = async () => {
     try{
-      const response = await fetch('https://parafiamaciejowice.pl/wp-json/custom/v1/albums/')
+      const response = await fetch('http://localhost:8882/wp-json/custom/v1/albums/')
 
       if(!response.ok){
         throw new Error('Nie udało się pobrać albumów')
@@ -35,8 +35,8 @@ const Gallery = () => {
       <section className='w-[1168px] mx-auto flex gap-[16px] flex-wrap mb-[64px] max-xl:w-[872px] max-lg:w-[576px] max-sm:w-[90%] max-sm:justify-center'>
         {albums?.map((album, index) => (
           <Link to={`/galeria/${album.name}`}>
-            <article key={index} className='relative w-[280px] h-[350px] shadow-[4px_4px_20px_#00000040] bg-white'>
-              <img src={album.cover_image} alt="Zdjęcie okładki albumu" loading='lazy' className='image-shape object-cover h-[250px]' />
+            <article key={index} className='gallery-album relative w-[280px] h-[350px] shadow-[4px_4px_20px_#00000040] bg-white overflow-hidden duration-500'>
+              <img src={album.cover_image} alt="Zdjęcie okładki albumu" loading='lazy' className='image-shape object-cover h-[250px] w-full duration-500' />
               <div className='absolute bg-white px-[32px] py-[16px]'>
                   <p className='text-[14px] font-light text-[#7D7D7D]'>{formatDateG(album.date)}</p>
                   <p className='text-[18px] font-medium line-clamp-2'>{album.name}</p>

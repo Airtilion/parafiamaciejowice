@@ -1,16 +1,19 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
-import Home from "../pages/Home";
-import NotFound from "../pages/NotFound";
-import Posts from "../pages/Posts";
-import SinglePost from "../pages/SinglePost";
-import Gallery from "../pages/Gallery";
-import SingleGallery from "../pages/SingleGallery";
-import Projects from "../pages/Projects";
-import Information from "../pages/Information";
-import History from "../pages/History";
-import Charity from "../pages/Charity";
-import ChildSafetyPolicies from "../pages/ChildSafetyPolicies";
+import { lazy, Suspense } from "react";
+import Loading from "../components/Loading";
+
+const Home = lazy(() => import("../pages/Home"));
+const NotFound = lazy(() => import("../pages/NotFound"));
+const Posts = lazy(() => import("../pages/Posts"));
+const SinglePost = lazy(() => import("../pages/SinglePost"));
+const Gallery = lazy(() => import("../pages/Gallery"));
+const SingleGallery = lazy(() => import("../pages/SingleGallery"));
+const Projects = lazy(() => import("../pages/Projects"));
+const Information = lazy(() => import("../pages/Information"));
+const History = lazy(() => import("../pages/History"));
+const Charity = lazy(() => import("../pages/Charity"));
+const ChildSafetyPolicies = lazy(() => import("../pages/ChildSafetyPolicies"));
 
 const router = createBrowserRouter([
   {
@@ -34,7 +37,11 @@ const router = createBrowserRouter([
 ]);
 
 const AppRouter = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <Suspense fallback={<Loading/>}>
+      <RouterProvider router={router} />;
+    </Suspense>
+  )
 };
 
 export default AppRouter;
