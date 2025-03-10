@@ -8,7 +8,7 @@ import zespolBg from '../../assets/media/images/zespol.webp'
 
 const Church = () => {
   return (
-    <section className='w-full bg-white py-[64px] pb-[160px]'>
+    <section className='w-full bg-white py-[64px] pb-[160px]' id="parafia">
         <article className='w-[1240px] mx-auto flex gap-[32px] h-[500px] max-xl:gap-[16px] max-xl:w-[988px] max-lg:flex-col-reverse max-lg:w-[722px] max-lg:h-auto max-md:w-full'>
             <ChurchCard title="Cmentarz" desc="więcej o naszym cmentarzu, zasadach korzystania oraz możliwościach pochówku." link="/cmentarz" image={cmentarzBg} type={0}/>
             

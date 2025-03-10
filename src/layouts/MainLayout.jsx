@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Links from "../components/Links";
+import ScrollToSection from "../components/ScrollToSection";
 
 const MainLayout = () => {
     return (
@@ -14,6 +15,7 @@ const MainLayout = () => {
                 <Links />
             </main>
             <Footer />
+            <ScrollToSection />
         </>
     );
 };
