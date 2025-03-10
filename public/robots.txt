@@ -10,4 +10,4 @@ Disallow: /*.css
 Disallow: /?*
 Disallow: /*?*
 
-Sitemap: https://parafiamaciejowice/sitemap.xml
+Sitemap: https://parafiamaciejowice.pl/sitemap.xml
