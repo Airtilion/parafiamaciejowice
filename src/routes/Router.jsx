@@ -30,9 +30,8 @@ const router = createBrowserRouter([
       { path: "informator", element: <Information /> },
       { path: "historia", element: <History /> },
       { path: "zespol-charytatywny", element: <Charity /> },
-      { path: "standardy-ochrony-dzieci", element: <ChildSafetyPolicies />},
-      { path: "cmentarz", element: <Graves />},
-      
+      { path: "standardy-ochrony-dzieci", element: <ChildSafetyPolicies /> },
+      { path: "cmentarz", element: <Graves /> },
     ],
   },
   { path: "*", element: <NotFound /> },
@@ -40,7 +39,7 @@ const router = createBrowserRouter([
 
 const AppRouter = () => {
   return (
-    <Suspense fallback={<Loading/>}>
+    <Suspense fallback={<Loading />}>
       <RouterProvider router={router} />
     </Suspense>
   )
