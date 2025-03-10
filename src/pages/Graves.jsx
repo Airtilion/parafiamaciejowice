@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import TitleCard from '../components/TitleCard'
 import FixedBg from '../components/FixedBg'
 
 const Graves = () => {
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, []);
     return (
         <>
             <TitleCard title="Cmentarz" />
