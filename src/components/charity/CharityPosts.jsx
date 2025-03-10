@@ -22,7 +22,7 @@ const CharityPosts = () => {
     }, [])
     return (
         <section className='flex flex-col justify-center items-center'>
-            <h3 className='text-center px-[10px]'>Aktualności Parafialnego Zespołu Charytatywnego</h3>
+            <h3 className='text-center px-[10px]'>Aktaulności Parafialnego Zespołu Charytatywnego</h3>
             <div className='mt-[32px] w-full flex justify-center'>
                 {
                     loading ?
@@ -34,10 +34,7 @@ const CharityPosts = () => {
                                 :
                                 posts.map((post, index) => (
                                     <article className={`w-full ${index % 2 === 0 ? 'bg-white' : ''}`} key={index}>
-                                        <div className='charity w-[1240px] py-[64px] mx-auto max-xl:w-[1000px] max-lg:w-[90%]'>
-                                            <h4 className='text-[#cda272] text-[50px] font-semibold'>{post.title.rendered}</h4>
-                                            <div dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
-                                        </div>
+                                        <div className='charity w-[1240px] py-[64px] mx-auto max-xl:w-[1000px] max-lg:w-[90%]' dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
                                     </article>
                                 ))
                             }
