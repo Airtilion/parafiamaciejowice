@@ -126,6 +126,11 @@ const SingleGallery = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [id]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+  
+
   return (
     <>
       <TitleCard title="Galeria" />
