@@ -14,6 +14,7 @@ const Information = lazy(() => import("../pages/Information"));
 const History = lazy(() => import("../pages/History"));
 const Charity = lazy(() => import("../pages/Charity"));
 const ChildSafetyPolicies = lazy(() => import("../pages/ChildSafetyPolicies"));
+const Graves = lazy(() => import("../pages/Graves"));
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
       { path: "historia", element: <History /> },
       { path: "zespol-charytatywny", element: <Charity /> },
       { path: "standardy-ochrony-dzieci", element: <ChildSafetyPolicies />},
+      { path: "cmentarz", element: <Graves />},
       
     ],
   },

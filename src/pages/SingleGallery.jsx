@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import TitleCard from "../components/TitleCard";
 import FixedBg from "../components/FixedBg";
@@ -6,19 +6,22 @@ import ImageBrowserDialog from "../components/gallery/ImageBrowserDialog";
 
 const SingleGallery = () => {
   const { id } = useParams();
-  const [photos, setPhotos] = useState([]);
+  const [photos, setPhotos] = useState([]); // Wszystkie zdjęcia z API
+  const [displayedPhotos, setDisplayedPhotos] = useState([]); // Obecnie wyświetlane zdjęcia
   const [columns, setColumns] = useState(3);
   const [coords, setCoords] = useState([]);
   const [siteHeight, setSiteHeight] = useState(0);
   const resizeTimeout = useRef(null);
   const [activePhoto, setActivePhoto] = useState("");
   const imageBrowser = useRef(null);
+  const observerTarget = useRef(null); // Ref dla elementu obserwowanego przez IntersectionObserver
+  const photosPerPage = 16; // Liczba zdjęć na stronę
 
   // Pobranie albumu
   const getAlbum = async () => {
     try {
       const response = await fetch(
-        `http://localhost:8882/wp-json/custom/v1/folder-images/?folder_name=${id}`
+        `https://parafiamaciejowice.pl/wp-json/custom/v1/folder-images/?folder_name=${id}`
       );
 
       if (!response.ok) {
@@ -27,6 +30,7 @@ const SingleGallery = () => {
 
       const data = await response.json();
       setPhotos(data);
+      setDisplayedPhotos(data.slice(0, photosPerPage)); // Ładuj początkowe 16 zdjęć
     } catch (err) {
       console.error(err);
     }
@@ -48,14 +52,14 @@ const SingleGallery = () => {
   };
 
   // Obliczanie pozycji zdjęć w układzie masonry
-  useEffect(() => {
-    if (photos.length === 0) return;
-    
+  const calculateMasonryLayout = useCallback(() => {
+    if (displayedPhotos.length === 0) return;
+
     const newColumns = calculateColumns();
     setColumns(newColumns);
 
     let columnHeights = new Array(newColumns).fill(0);
-    let newCoords = photos.map((photo) => {
+    let newCoords = displayedPhotos.map((photo) => {
       const column = columnHeights.indexOf(Math.min(...columnHeights));
       const imgWidth = 290; // Stała szerokość zdjęć
       const imgHeight = (photo.height * imgWidth) / photo.width + 10; // Zachowanie proporcji + margines
@@ -69,13 +73,49 @@ const SingleGallery = () => {
 
     setSiteHeight(Math.max(...columnHeights));
     setCoords(newCoords);
-  }, [photos, columns]);
+  }, [displayedPhotos]);
+
+  // Funkcja ładująca kolejne zdjęcia
+  const loadMorePhotos = useCallback(() => {
+    const currentLength = displayedPhotos.length;
+    const nextPhotos = photos.slice(currentLength, currentLength + photosPerPage);
+    setDisplayedPhotos((prev) => [...prev, ...nextPhotos]);
+  }, [displayedPhotos, photos]);
+
+  // Obsługa IntersectionObserver
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const target = entries[0];
+        if (target.isIntersecting && displayedPhotos.length < photos.length) {
+          loadMorePhotos();
+        }
+      },
+      { root: null, rootMargin: "100px", threshold: 0.1 }
+    );
+
+    if (observerTarget.current) {
+      observer.observe(observerTarget.current);
+    }
+
+    return () => {
+      if (observerTarget.current) {
+        observer.unobserve(observerTarget.current);
+      }
+    };
+  }, [displayedPhotos, photos, loadMorePhotos]);
+
+  // Obliczanie układu masonry przy zmianie liczby zdjęć lub kolumn
+  useEffect(() => {
+    calculateMasonryLayout();
+  }, [displayedPhotos, calculateMasonryLayout]);
 
   // Obsługa zmiany rozmiaru okna
   const handleResize = () => {
     clearTimeout(resizeTimeout.current);
     resizeTimeout.current = setTimeout(() => {
       setColumns(calculateColumns());
+      calculateMasonryLayout(); // Ponowne obliczanie układu przy resize
     }, 500);
   };
 
@@ -93,7 +133,7 @@ const SingleGallery = () => {
         className="w-[1190px] mx-auto relative mb-[64px] max-2xl:w-[890px] max-lg:w-[590px] max-md:w-[90%] max-md:flex max-md:flex-col max-md:items-center max-md:gap-[8px] overflow-hidden"
         style={{ height: columns > 1 ? siteHeight : "auto" }}
       >
-        {photos.map((photo, index) => (
+        {displayedPhotos.map((photo, index) => (
           <img
             key={index}
             src={photo.link}
@@ -108,6 +148,19 @@ const SingleGallery = () => {
             onClick={() => openImageBrowser(index)}
           />
         ))}
+        {/* Element obserwowany przez IntersectionObserver, umieszczony na dole */}
+        {columns > 1 && (
+          <div
+            ref={observerTarget}
+            style={{
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              width: "100%",
+              height: "10px",
+            }}
+          />
+        )}
       </section>
 
       <ImageBrowserDialog
