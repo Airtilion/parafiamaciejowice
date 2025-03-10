@@ -273,6 +273,7 @@ h3{font-size: 25px;}
     justify-content: center;
     gap: 16px;
   }
+  .charity .charityReverse{flex-direction: column-reverse;}
 
   .charity .wp-block-column{flex-basis: 0 !important;}
   .charity p{font-size: 16px;}
