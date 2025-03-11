@@ -13,7 +13,7 @@ const ChildSafety = () => {
                     <ul className='list-none max-sm:space-y-[8px]'>
                         <li>Osoba odpowiedzialna za standardy - Danuta Stępień  - tel.  697 640 976</li>
                         <li>Osoba zaufana - Elżbieta Lis - tel. 692 294 278 </li>
-                        <li>Osoba odpowiedzialna za interwencję - ks. Andrzej Jaczewski, proboszcz parafii - tel. 512 373870</li>
+                        <li>Osoba odpowiedzialna za interwencję - ks. Andrzej Jaczewski, proboszcz parafii - tel. 512 373 870</li>
                     </ul>
                     <div className='mt-[32px] flex justify-center items-center'>
                         <Link to="https://docs.google.com/document/d/1-lmUEEMr97dzI1fh2Dxkvm7XMNkTCeDx/edit?tab=t.0" target='_blank' rel='noreferrer noopener'>

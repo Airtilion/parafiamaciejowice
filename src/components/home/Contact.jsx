@@ -10,7 +10,7 @@ const Contact = () => {
                 <div className='relative h-full mt-[-100px] flex flex-col gap-[16px] max-xl:mt-[-80px]'>
                     <div className='w-full bg-white relative z-30 flex items-center justify-center gap-[16px] py-[32px] shadow-[4px_4px_20px_#00000040] rounded-[5px] max-xl:px-[16px]'>
                         <Icon icon="flowbite:map-pin-alt-solid" width="50" height="50" className='relative z-30 text-[#CDA272]'/>
-                        <p>Parafia Rzymskokatolicka pw. Wniebowzięcia NMP <br /> ul. Kościelna <br /> 408-480 Maciejowice</p>
+                        <p>Parafia Rzymskokatolicka pw. Wniebowzięcia NMP <br /> ul. Kościelna 4<br /> 08-480 Maciejowice</p>
                     </div>
                     <iframe title='Mapa dojazdu do Parafii Maciejowice' className='relative z-30 rounded-[5px] max-xl:w-[500px] max-xl:h-[400px] max-lg:w-full' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19782.33687702834!2d21.540044418560097!3d51.700249339443225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471895206e4c40c1%3A0x427a3c2f2b1e1678!2zS2_Fm2Npw7PFgiBXbmllYm93emnEmWNpYSBOTVAgdyBNYWNpZWpvd2ljYWNo!5e0!3m2!1spl!2spl!4v1741072411430!5m2!1spl!2spl" width="600" height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
@@ -36,8 +36,8 @@ const Contact = () => {
                         <p className='text-[20px] font-semibold'>Wsparcie parafii</p>
                     </div>
 
-                    <p>Parafia Rzymskokatolicka pw. <br /> Wniebowzięcia NPM w Maciejowicach</p>
-                    <p>Nr konta: 73 1240 2728 1111 0000 3989 8782</p>
+                    <p>Parafia Rzymskokatolicka pw. <br /> Wniebowzięcia NMP w Maciejowicach</p>
+                    <p>Nr konta: 73 1240 2728 1111 0000 3989 8782</p>
                 </div>
             </article>
 
