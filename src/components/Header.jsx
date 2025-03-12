@@ -12,7 +12,7 @@ const Header = () => {
 
         <img src={Logo} height={200} alt="Logo" className='h-[200px] z-10 max-2xl:h-[160px]'/>
         <h1 className='w-[560px] z-10 text-white text-center font-light max-sm:w-[90%]'>Parafia pw. Wniebowzięcia NMP w Maciejowicach</h1>
-        <p className='text-white text-[20px] z-10 font-light max-2xl:text-[18px] max-md:text-[15px]'>Diecezja siedlecka</p>
+        <p className='text-white text-[20px] z-10 font-light max-2xl:text-[18px] max-md:text-[15px]'>Diecezja Siedlecka</p>
       </section>
     </header>
   )
