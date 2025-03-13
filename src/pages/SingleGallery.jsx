@@ -154,18 +154,17 @@ const SingleGallery = () => {
           />
         ))}
         {/* Element obserwowany przez IntersectionObserver, umieszczony na dole */}
-        {columns > 1 && (
           <div
             ref={observerTarget}
             style={{
-              position: "absolute",
+              position: columns !== 1 && 'absolute',
               bottom: 0,
               left: 0,
               width: "100%",
               height: "10px",
             }}
           />
-        )}
+        
       </section>
 
       <ImageBrowserDialog
