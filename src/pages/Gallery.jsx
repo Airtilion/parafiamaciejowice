@@ -37,7 +37,6 @@ const Gallery = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          console.log("Ładowanie kolejnych albumów...");
           setVisibleCount((prevCount) => Math.min(prevCount + 8, albums.length));
         }
       },
