@@ -22,7 +22,7 @@ const elements = [
   },
   {
     name: "Cmentarz",
-    link: "https://airtilion.com"
+    link: "/cmentarz"
   },
   {
     name: "Kontakt",
@@ -50,7 +50,7 @@ const Footer = () => {
 
           </ul>
 
-          <Link to="https://www.facebook.com/groups/336445672064515" target='_blank' rel='noreferrer noopener' aria-label="Przejdź do facebooka Parafii Maciejowice" className='flex justify-center items-center max-xl:mt-[16px]'>
+          <Link to="https://www.facebook.com/profile.php?id=100064693026069" target='_blank' rel='noreferrer noopener' aria-label="Przejdź do facebooka Parafii Maciejowice" className='flex justify-center items-center max-xl:mt-[16px]'>
             <Icon icon="ic:baseline-facebook" width="30" height="30" alt="Ikona facebook" className='text-[#CDA272] duration-700 hover:text-black' />
           </Link>
 
