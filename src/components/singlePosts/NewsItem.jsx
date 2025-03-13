@@ -54,7 +54,7 @@ const NewsItem = ({ id }) => {
                             <p className='text-[20px] font-bold max-sm:text-[18px]'>{date[2]}</p>
                             <hr className='border-none bg-[#D9D9D9] w-[630px] h-[2px] max-lg:w-[90%] max-lg:mx-auto' />
                             <h2 className='mt-[32px]' dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-                            <p className='mt-[64px] max-lg:mt-[32px]' dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+                            <div className='mt-[64px] max-lg:mt-[32px]' dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
                         </article>
                 }
             </div>
