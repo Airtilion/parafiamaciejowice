@@ -146,7 +146,7 @@ const SingleGallery = () => {
       </div>
 
       <section
-        className="mt-[16px] w-[1190px] mx-auto relative mb-[64px] max-2xl:w-[890px] max-lg:w-[590px] max-md:w-[90%] max-md:flex max-md:flex-col max-md:items-center max-md:gap-[8px] overflow-hidden"
+        className="mt-[32px] w-[1190px] mx-auto relative mb-[64px] max-2xl:w-[890px] max-lg:w-[590px] max-md:w-[90%] max-md:flex max-md:flex-col max-md:items-center max-md:gap-[8px] overflow-hidden"
         style={{ height: columns > 1 ? siteHeight : "auto" }}
       >
         {displayedPhotos.map((photo, index) => (
