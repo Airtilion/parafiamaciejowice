@@ -16,7 +16,6 @@ const Home = () => {
     <Suspense fallback={<div>Ładowanie...</div>}>
       <MainDescription />
       <FixedBg />
-      <StatsTails />
       <Villages />
       <Readings />
       <Quote />
@@ -24,6 +23,7 @@ const Home = () => {
       <Church />
       <NewsSection />
       <Contact />
+      <StatsTails />
     </Suspense>
   )
 }
