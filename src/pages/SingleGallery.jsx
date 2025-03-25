@@ -32,7 +32,6 @@ const SingleGallery = () => {
       }
 
       const data = await response.json();
-      console.log(data);
       setPhotos(data);
       setDisplayedPhotos(data.slice(0, photosPerPage)); // Ładuj początkowe 16 zdjęć
     } catch (err) {
