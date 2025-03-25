@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import TitleCard from "../components/TitleCard";
 import FixedBg from "../components/FixedBg";
 import ImageBrowserDialog from "../components/gallery/ImageBrowserDialog";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 const SingleGallery = () => {
   const { id } = useParams();
@@ -16,6 +17,8 @@ const SingleGallery = () => {
   const imageBrowser = useRef(null);
   const observerTarget = useRef(null); // Ref dla elementu obserwowanego przez IntersectionObserver
   const photosPerPage = 16; // Liczba zdjęć na stronę
+  const location = useLocation();
+  const albumTitle = location.state?.title
 
   // Pobranie albumu
   const getAlbum = async () => {
@@ -29,6 +32,7 @@ const SingleGallery = () => {
       }
 
       const data = await response.json();
+      console.log(data);
       setPhotos(data);
       setDisplayedPhotos(data.slice(0, photosPerPage)); // Ładuj początkowe 16 zdjęć
     } catch (err) {
@@ -129,13 +133,21 @@ const SingleGallery = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
-  
+
 
   return (
     <>
       <TitleCard title="Galeria" />
+      <div className="w-[1190px] mx-auto max-2xl:w-[890px] max-lg:w-[590px] max-md:w-[90%] flex flex-col space-y-[8px]">
+        <Link to="/galeria" className="text-black duration-700 flex items-center gap-[8px] hover:text-[#CDA272]">
+          <Icon icon="lets-icons:back" width="24" height="24" />
+          <p>Powrót na stronę z albumami</p>
+        </Link>
+        <h3 className="text-[20px] max-sm:text-[18px] max-md:text-center">{albumTitle}</h3>
+      </div>
+
       <section
-        className="w-[1190px] mx-auto relative mb-[64px] max-2xl:w-[890px] max-lg:w-[590px] max-md:w-[90%] max-md:flex max-md:flex-col max-md:items-center max-md:gap-[8px] overflow-hidden"
+        className="mt-[16px] w-[1190px] mx-auto relative mb-[64px] max-2xl:w-[890px] max-lg:w-[590px] max-md:w-[90%] max-md:flex max-md:flex-col max-md:items-center max-md:gap-[8px] overflow-hidden"
         style={{ height: columns > 1 ? siteHeight : "auto" }}
       >
         {displayedPhotos.map((photo, index) => (
@@ -154,17 +166,17 @@ const SingleGallery = () => {
           />
         ))}
         {/* Element obserwowany przez IntersectionObserver, umieszczony na dole */}
-          <div
-            ref={observerTarget}
-            style={{
-              position: columns !== 1 && 'absolute',
-              bottom: 0,
-              left: 0,
-              width: "100%",
-              height: "10px",
-            }}
-          />
-        
+        <div
+          ref={observerTarget}
+          style={{
+            position: columns !== 1 && 'absolute',
+            bottom: 0,
+            left: 0,
+            width: "100%",
+            height: "10px",
+          }}
+        />
+
       </section>
 
       <ImageBrowserDialog
